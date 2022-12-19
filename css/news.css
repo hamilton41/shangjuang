@@ -1,0 +1,125 @@
+.news .bg{
+    width: 100%;
+}
+.news .bg img{
+    width: 100%;
+}
+
+.section-1 {
+    padding-top: 5em;
+    position: relative;
+}
+.section-1::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 2px;
+    height: 4.5em;
+    margin: auto;
+    background-color:#cea66ba3;
+}
+
+.section-1 .section-title a{
+    width: 90px;
+    display: inline-block;
+    box-sizing: border-box;
+    line-height: 1em;
+    padding: 4px 5px;
+    margin-top: 0.4em;
+}
+
+.section-1-bg{
+    position: absolute;
+    top: 5em;
+    left: 0;
+    z-index: 1;
+    filter: brightness(100%);
+    opacity: 0.5;
+}
+.section-1-bg img{
+    width: 90%;
+}
+
+.section-1 .main {
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    margin: auto;
+    position: relative;
+    z-index: 3;
+}
+
+.section-1 .main .main-txt{
+    width: 50%;
+    padding-right: 2em;
+    box-sizing: border-box;
+    border-right: 2px solid #603814;
+}
+.section-1 .main .main-txt h1{
+    font-size: 36px;
+    color:#946640;
+}
+
+.section-1 .main .main-txt span{
+    font-size: 20px;
+    margin: 1em 0;
+    display: inline-block;
+    font-weight: 500;
+}
+
+
+.section-1 .main .main-txt img{
+    width: 100%;
+}
+
+.section-1 .main .main-txt p{
+    font-size: 22px;
+    margin: 1em 0;
+    display: inline-block;
+    font-weight: 500;
+    
+}
+
+.section-1 .main .main-side{
+    width: 25%;
+
+}
+.section-1 .main .main-side a{
+    font-size: 20px;
+    position: relative;
+    right: 15px;
+}
+
+.section-1 .main ul{
+    flex-direction: column;
+
+}
+
+.section-1 .main ul li{
+    box-sizing: border-box;
+    width:90%;
+    font-size: 20px;
+    list-style:disc;
+    list-style-position:inside;
+    background-color: #cea66ba3;
+    vertical-align: middle;
+    margin: 8px auto;
+    padding: 5px 0 5px 15px;
+    border-radius: 20px;
+}
+
+.section-1 .main ul li::marker{
+    color: white;
+}
+
+.section-2{
+    padding-top: 3em;
+    padding-bottom: 6em;
+}
+
+.section-2 .main{
+    width: 68%;
+    margin: auto;
+}
