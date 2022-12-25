@@ -339,11 +339,13 @@ section .section-title a{
         display: block;
         font-size: 40px;
         margin-left: 1em;
-
+        position: absolute;
+        top: 34px;
+        right: 34px;
 
     }
     .header .container-header>a{
-        display: none;
+        width: 130px;
     }
     .header .container-header ul{
         position: fixed;
