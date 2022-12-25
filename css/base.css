@@ -24,9 +24,33 @@ body{
     max-width: 1300px;
     margin: auto;
 }
+
+.header .container-header>a{
+    width: 15%;
+}
+
+.header .container-header>a img{
+    width: 100%;
+}
+
+.header .container-header ul{
+    width: 85%;
+    justify-content: center;
+}
+
+
 .header .container-header ul i{
     color: white;
     font-size: 20px;
+}
+
+.header .container-header ul>i{
+    display: none;
+}
+
+.header>i{
+    color: white;
+    display: none;
 }
 .header .container-header ul .search-box{
     background-color: white;
@@ -120,6 +144,7 @@ body{
 
 .header ul li{
     margin-left: 20px;
+    position: relative;
 }
 
 ul{
@@ -281,7 +306,7 @@ section .section-title a{
     appearance:none;
     width: 16%;
     box-sizing: border-box;
-    padding: 10px 3em 10px 20px;
+    padding: 10px 0em 10px 20px;
     background-color: rgb(242,242,242);
     color: rgb(75, 75, 75);
     font-size: 18px;
@@ -304,5 +329,83 @@ section .section-title a{
     font-weight: 600;
     padding: 5px 1em;
     border-radius: 30px;
+}
+
+@media(max-width:1024px){
+    .header{
+        height: 60px;
+    }
+    .header>i{
+        display: block;
+        font-size: 40px;
+        margin-left: 1em;
+
+
+    }
+    .header .container-header>a{
+        display: none;
+    }
+    .header .container-header ul{
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 250px;
+        flex-direction: column;
+        z-index: 10;
+        background-color: white;
+        transform: translateX(-100%);
+        transition: transform 0.1s;
+    }
+
+    .header .container-header .nav-open{
+        transform: translateX(0);
+        box-shadow: 0px 0px 10px 2px rgba(70, 70, 70, 0.402);
+
+    }
+    
+
+    .header .container-header ul li{
+        margin: 10px auto;
+        width: 120px;
+    }
+    .header .container-header ul li a{
+        color: #603814;
+        font-size: 24px;
+        font-weight: 600;
+    }
+    .header .container-header ul>i{
+        display: block;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        color: #603814;
+        font-size: 30px;
+        font-weight: 100;
+    }
+
+
+    .news .container-news .news-title{
+        text-align: center;
+        width: 7em;
+        padding: 0.6em 0em 0 0;
+    }
+    .news .container-news .news-content{
+        width: 100%;
+    }
+
+    .search-wrap{
+        bottom: -23em !important;
+    }
+
+    .select-container{
+        width: 100%;
+        flex-direction: column;
+        row-gap: 7px;
+    }
+    .search-wrap select{
+        width: 100%;
+    }
+
 }
 

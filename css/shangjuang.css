@@ -96,3 +96,33 @@ section .section-title{
     font-size: unset;
     display: block;
 }
+
+
+@media (max-width:1024px){
+    .section-1::before{
+        top: 22em;
+    }
+    .section-1{
+        padding-top: 24em;
+    }
+}
+
+@media(max-width:768px){
+    .main-item{
+        width: 100%;
+        margin-bottom: 2em;
+    }
+    .main-item-container{
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 680px){
+    .news .bg {
+        height: unset;
+        overflow: visible;
+    }
+    .news .bg img{
+        left: 0;
+    }
+}

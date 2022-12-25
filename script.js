@@ -10,3 +10,15 @@ body.addEventListener("click",function(){
 searchBtn.addEventListener("click",function(){
     searchBox.classList.toggle("search-box-open");
 });
+
+let headerNav = document.querySelector(".header .container-header ul");
+let navOpen = document.querySelector(".header>i");
+let navClose = document.querySelector(".header .container-header ul>i");
+
+navClose.addEventListener("click",function(){
+    headerNav.classList.remove("nav-open");
+});
+
+navOpen.addEventListener("click",function(){
+    headerNav.classList.add("nav-open");
+});

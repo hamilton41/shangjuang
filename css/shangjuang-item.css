@@ -192,3 +192,52 @@ section .section-title{
 .owl-theme .item {
     width: 100%;
   }
+
+
+@media(max-width:1024px){
+    .section-1 .main-img{
+        width: 100%;
+        margin-bottom: 2em;
+    }
+    .section-1 .main{
+        flex-direction: column;
+    }
+    .section-1{
+        padding-top: 5em;
+    }
+}
+
+@media(max-width:768px){
+    .section-2 .title-nav span{
+        left: 0;
+        bottom: 3.6em;
+    }
+    .section-2 .content-container .item{
+        width: 48%;
+    }
+}
+
+@media (max-width: 680px){
+    .news .bg img{
+        width: 100%;
+        left: 0;
+    }
+    .news .bg{
+        height: unset;
+    }
+    .section-2 .title-nav .btn{
+        padding: 0.5em 1em;
+    }
+    .section-2 .content-container .item{
+        width: 100%;
+    }
+    .section-1 .main .main-txt .title{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+    .section-1 .main .main-txt .title h1{
+        grid-column: 1/3;
+    }
+    
+  }
