@@ -138,12 +138,16 @@
     }
     .section-2 .main-item-container{
         flex-direction: column;
+        width: 90%;
         align-items: center;
     }
     .section-2 .main-item-container .main-item{
         width: 80%;
         height: 36em;
         margin-bottom: 4em;
+    }
+    section .section-title{
+        margin-bottom: 1em;
     }
 }
 

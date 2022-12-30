@@ -27,7 +27,7 @@
 
 .owl-dots{
     position: absolute;
-    bottom: 20px;
+    bottom: -32px;
     left: 0;
     right: 0;
 }
@@ -51,13 +51,21 @@
     padding: 0 3em;
 }
 
+.carousel-section-1 .owl-carousel.owl-drag .owl-item .item{
+    height: 870px;
+}
+
+.carousel-section-1 .owl-carousel .owl-item img{
+    height: 100%;
+}
+
 
 .section-1{
     display: flex;
     width: 100%;
     margin: auto;
     align-items: center;
-    padding: 10em 17%;
+    padding: 10em 13%;
     box-sizing: border-box;
     background-color: #F2EFEA;
     position: relative;
@@ -81,8 +89,8 @@
 
 .section-1-txt{
     width: 60%;
-    margin-right: 5em;
-    margin-left: 10em;
+    margin-right: 4em;
+    margin-left: 4em;
     padding-bottom: 9em;
     position: relative;
     z-index: 3;
@@ -301,7 +309,7 @@
     background-color:#cea66ba6;
 }
 
-.section-3 .main .img-mask::before{
+.section-3 .main .img-mask:hover::before{
     position: absolute;
     top: 0;
     left: 0;
@@ -309,6 +317,8 @@
     height: 98%;
     background-color:#cea66ba6;
     content: "";
+    opacity: 1;
+    transition: opacity 1s;
 }
 
 .bg,.bg img{
@@ -316,25 +326,37 @@
 }
 
 .section-3 .main .mask-txt{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: absolute;
+    writing-mode: vertical-lr;
     left: 0;
     right: 0;
     top: 0;
     bottom: 0;
     margin: auto;
     height: fit-content;
-    width: 1em;
+    width: 100%;
+    height: 100%;
     font-size: 18px;
     line-height: 24px;
     color: white;
     font-weight: 600;
+    opacity: 0;
+    transition: 0.1s opacity;
+}
+
+.section-3 .main .mask-txt:hover{
+    opacity: 1;
+    transition: 0.1s;
 }
 
 .section-4{
     width: 100%;
     position: relative;
     padding-top: 5em;
-    background-image: url("./images/index_bn3.png");
+    background-image: url("../images/index_bn3.png");
     padding-bottom: 10em;
 }
 
@@ -399,6 +421,7 @@
     }
     .section-1{
         flex-direction: column;
+        padding: 3em 13%;
     }
     .section-1-bg img{
         width: 60%;
@@ -416,10 +439,13 @@
     }
 
     .section-2-carousel .owl-carousel{
-        width: 86%;
+        width: 75%;
     }
     .section-2-carousel .owl-carousel .owl-nav{
         display: none !important;
+    }
+    .section-2-carousel .owl-carousel .item{
+        height: 36em;
     }
     .section-3-bg img{
         width: 60%;
@@ -437,11 +463,15 @@
 }
 
 @media(max-width:680px){
+
+    .carousel-section-1 .owl-carousel.owl-drag .owl-item .item{
+        height: 100%;
+        overflow: hidden;
+    }
     .section-2 {
         padding-bottom: 15em;
     }
     .section-2-carousel .owl-carousel{
-        height: 20em;
     }
     .carousel-section-1 .owl-item{
         height: 23em;
@@ -449,10 +479,7 @@
     .carousel-section-1 .owl-item .item{
         height: 100%;
     }
-    .carousel-section-1 .owl-item .item img{
-        width: unset !important;
-        height: 100%;
-    }
+    
     .index>.bg{
         display: flex;
         justify-content: center;
@@ -461,5 +488,41 @@
     .index>.bg img{
         height: 20em;
         width: unset;
+    }
+    .section-2-carousel .owl-carousel .owl-nav{
+        display: block !important;
+        width: 100%;
+        left: 0;
+    }
+    .section-4-carousel .owl-carousel .owl-nav{
+        display: block !important;
+        width: 100%;
+        left: 0;
+    }
+    .section-4 .section-4-carousel .owl-nav .owl-prev{
+        left: -40px;
+        background-color: unset;
+    }
+    .section-4 .section-4-carousel .owl-nav .owl-next{
+        right: -40px;
+        background-color: unset;
+    }
+    .section-2-carousel .owl-carousel .item{
+        height: 30em;
+    }
+    .owl-prev{
+        left: -40px;
+    }
+    .owl-next{
+        right:-40px
+    }
+}
+
+@media(max-width:500px){
+    .carousel-section-1 .owl-item .item img{
+        width: unset !important;
+        height: 100%;
+        position: relative;
+        left: -4rem;
     }
 }

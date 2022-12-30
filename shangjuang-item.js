@@ -34,3 +34,23 @@ $(".owl-carousel").owlCarousel({
       }
     }
   });
+
+
+let itemImg = document.querySelectorAll(".section-2 .content-container .item img");
+let item = document.querySelectorAll(".section-2 .content-container .item");
+let showImg = document.querySelector(".show_img");
+let itemTxt = document.querySelectorAll(".section-2 .content-container .item-txt");
+for(let i=0;i<itemImg.length;i++){
+  item[i].addEventListener("click",function(){
+      let imgSrc = itemImg[i].src;
+      showImg.innerHTML='<img src="'+imgSrc+'" alt="" style="width: 40%;">'+ '<p> '+itemTxt[i].textContent+'</p>';
+      showImg.classList.add("active");
+  });
+}
+
+  showImg.addEventListener("click",function(){
+        
+          showImg.classList.remove("active");
+          
+        
+  });

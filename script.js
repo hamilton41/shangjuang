@@ -22,3 +22,9 @@ navClose.addEventListener("click",function(){
 navOpen.addEventListener("click",function(){
     headerNav.classList.add("nav-open");
 });
+
+let headerTxtAnimate = document.querySelector(".news .container-news .news-content>p");
+
+var clock = setInterval(function() {
+  headerTxtAnimate.classList.toggle("go_down");
+ }, 5000);
